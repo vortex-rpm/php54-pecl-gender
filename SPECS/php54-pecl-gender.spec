@@ -21,10 +21,9 @@ URL: http://pecl.php.net/package/%{pecl_name}
 Source: http://pecl.php.net/get/%{pecl_name}-%{version}.tgz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear, librabbitmq041-devel
+BuildRequires: %{php_base}-devel, %{php_base}-cli, %{php_base}-pear
 Requires(post): %{__pecl}
 Requires(postun): %{__pecl}
-Requires: librabbitmq041
 
 %if %{?php_zend_api}0
 Requires: php(zend-abi) = %{php_zend_api}
